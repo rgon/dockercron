@@ -20,7 +20,7 @@ CRONFREQ=m h dm m dw
 ```
 
 You may add several `$CONTAINER` names that should be restarted to the variable. They are simply passed to `docker restart $CONTAINER`.
-The `CRONFREQ` attribute contains the time and date fields from a normal [`crontab`](https://man7.org/linux/man-pages/man5/crontab.5.html)
+The `CRONFREQ` attribute contains the time and date fields from a normal [`crontab`](https://man7.org/linux/man-pages/man5/crontab.5.html).
 
 ## Usage (vanilla `docker`)
 ```bash
