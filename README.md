@@ -40,7 +40,7 @@ On another terminal, you may run `watch -n .1 docker ps` to see the container ge
 ```yaml
     # Your other services should appear here
     restarter:
-        image: dockercronrestarter
+        image: dockercron
         build: 
         context: ./
         dockerfile: Dockerfile

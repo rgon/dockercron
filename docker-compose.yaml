@@ -3,12 +3,12 @@ services:
   # Your app here, specify CONTAINER in env: below to be your containers: opp1 appServer appProxy
 
   restarter:
-    image: dockercronrestarter
+    image: dockercron
     build: 
       context: ./
       dockerfile: Dockerfile
     volumes: ["/var/run/docker.sock:/var/run/docker.sock"]
     env:
-      - CRONFREQ=06 30 * * *
+      - CRONFREQ=30 06 * * *
       - CONTAINER=spotifyd
     restart: unless-stopped
