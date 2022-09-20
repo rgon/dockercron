@@ -1,7 +1,7 @@
 # `dockercron`: cron for `docker` containers
 Super simple docker container to restart other containers `CONTAINER` on a cronjob or perform other commands `COMMAND`, at the `cron` frequency specified in `CRONFREQ`.
 
-No external dependencies used in the Dockerfile, and only the `docker` image is used, so it should be secure.
+No external dependencies used in the Dockerfile, and only the `docker` image is used, so it should be as secure as docker itself, while taking into consideration the [security implications](https://jpetazzo.github.io/2015/09/03/do-not-use-docker-in-docker-for-ci/) that other software that runs [docker-from-docker](https://github.com/docker-library/docs/tree/master/docker#what-is-docker-in-docker) also has to mind.
 
 Made as a separate container because it's easier to handle in compose/more complex deploys than a cron job in the container scripts.
 
