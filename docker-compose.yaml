@@ -4,11 +4,13 @@ services:
 
   restarter:
     image: dockercron
-    build: 
+    build:
+      # if you git clone https://github.com/rgon/dockercron
+      # set context: ./dockercron
       context: ./
       dockerfile: Dockerfile
     volumes: ["/var/run/docker.sock:/var/run/docker.sock"]
-    env:
+    environment:
       - CRONFREQ=30 06 * * *
       - CONTAINER=spotifyd
     restart: unless-stopped
